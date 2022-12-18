@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import PrevIcon from "@/components/icons/PrevIcon";
 import NextIcon from "@/components/icons/NextIcon";
+import CloseIcon from "@/components/icons/CloseIcon";
 
 const SlideProduct = ({
 	arrayImgs = [],
@@ -37,17 +38,17 @@ const SlideProduct = ({
 		<section {...props}>
 			{isOpenModal && (
 				<button
-					className="text-right md:col-span-4"
+					className="flex justify-end md:col-span-4"
 					onClick={handleCloseModal}
 				>
-					cerrar
+					<CloseIcon className="fill-light-grayish-blue hover:fill-orange-primary" />
 				</button>
 			)}
 			<div className="relative col-span-4">
 				<img
 					src={arrayImgs[imgIndex]}
 					alt="product"
-					className="aspect-[16/12] w-full md:aspect-[16/17] md:cursor-pointer md:rounded-md"
+					className="aspect-[16/13] w-full md:aspect-[16/18] md:cursor-pointer md:rounded-md xl:aspect-[16/16] 2xl:max-h-[500px]"
 					onClick={handleOpenModal}
 				/>
 				<div

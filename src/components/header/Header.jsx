@@ -39,7 +39,7 @@ const Header = () => {
 						className="mb-12 md:hidden"
 						onClick={handleCloseMenu}
 					>
-						<CloseIcon />
+						<CloseIcon className="fill-grayish-blue" />
 					</button>
 					<NavLinkHeader text="Collections" />
 					<NavLinkHeader text="Men" />
